@@ -40,7 +40,7 @@ class App extends Component {
                 <div className="btn-group">
                   <button id="new-quote" onClick={this.randomNum} className="btn btn-primary">New Quote</button>
                   <button className="btn btn-primary">
-                    <a href="twitter.com/intent/tweet" id="tweet-quote"><i class="fab fa-twitter"></i> Tweet</a>
+                    <a href="twitter.com/intent/tweet" id="tweet-quote"><i className="fab fa-twitter"></i> Tweet</a>
                   </button>
                 </div>
               </div>
@@ -55,7 +55,6 @@ class App extends Component {
     axios.get(`https://type.fit/api/quotes`)
       .then(res => {
         const quotes = res.data;
-        console.log(quotes.length)
         this.setState({ quotes });
       });
   };
